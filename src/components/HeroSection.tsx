@@ -1,9 +1,11 @@
 import React from 'react';
 import { ChefHat, Play } from 'lucide-react';
 
+
 const HeroSection: React.FC = () => {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-3 gap-0 min-h-screen">
+   
       {/* Left Panel - Chef Job */}
       <div className="bg-green-700 text-white p-8 lg:p-12 flex flex-col justify-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">

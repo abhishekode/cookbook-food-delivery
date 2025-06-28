@@ -25,6 +25,9 @@ function App() {
         <FuelSection />
       </main>
       <Footer />
+    
+
+   
     </div>
   );
 }
