@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
     <footer className="bg-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-green-700 mb-4">CookBook<span className="text-orange-500">.</span></h2>

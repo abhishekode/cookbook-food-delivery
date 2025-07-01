@@ -1,14 +1,17 @@
 import React from 'react';
-import { FaBell, FaDiscord } from 'react-icons/fa';
+
+import { Bell ,Instagram } from 'lucide-react';
+
 
 const FuelSection: React.FC = () => {
   return (
     <section
-      className="relative py-12 sm:py-16 text-white overflow-hidden w-[95%] mx-auto rounded-3xl bg-cover bg-center"
+      className="relative py-12 sm:py-16 text-white overflow-hidden max-w-7xl mx-auto rounded-3xl bg-cover bg-center "
       style={{
         backgroundImage: `url('https://mir-s3-cdn-cf.behance.net/project_modules/hd/12858a32751817.56929eefe8431.jpg')`,
       }}
     >
+      
       {/* Background dark overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-30 z-0" />
 
@@ -95,11 +98,11 @@ const FuelSection: React.FC = () => {
           {/* Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4">
             <button className="bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition flex items-center gap-2">
-              <FaBell className="w-5 h-5 text-black" />
+              <  Bell className="w-5 h-5 text-black" />
               Subscribe Us
             </button>
             <div className="h-14 w-14 rounded-full bg-orange-500 flex items-center justify-center">
-              <FaDiscord className="w-8 h-8" />
+              <Instagram  className="w-8 h-8" />
             </div>
           </div>
         </div>
