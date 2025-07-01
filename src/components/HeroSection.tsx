@@ -1,92 +1,120 @@
 import React from 'react';
-import { ChefHat, Play } from 'lucide-react';
+import { BookOpen, ChefHat, Facebook, Play } from 'lucide-react';
+import Burger from '../assists/burger.png'
+
+
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-3 gap-0 min-h-screen">
-      {/* Left Panel - Chef Job */}
-      <div className="bg-green-700 text-white p-8 lg:p-12 flex flex-col justify-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-20 h-20 border border-white/20 rounded-full"></div>
-          <div className="absolute bottom-20 right-10 w-32 h-32 border border-white/20 rounded-full"></div>
-          <div className="absolute top-1/2 right-1/4 w-16 h-16 border border-white/20 rounded-full"></div>
-        </div>
-        
-        <div className="relative z-10">
-          <div className="flex items-center mb-4">
-            <ChefHat className="h-8 w-8 mr-3" />
-            <span className="text-xl font-bold">CookBook</span>
-          </div>
-          
-          <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            Get your First
-            <br />
-            <span className="text-yellow-400">Chef Job.</span>
+
+    <section className="max-w-7xl mx-auto flex flex-col md:flex-row rounded-b-3xl overflow-hidden font-['Open_Sans'] bg-[#f9f8f0]">
+      
+      
+      {/* Left Panel */}
+      <div className="bg-[#0f4d40] flex flex-col justify-center items-center p-8 md:p-12 md:w-1/3 relative ">
+        <div className="w-full flex justify-between items-center mb-12">
+          <h1 className="text-white font-merri text-3xl md:text-4xl leading-tight">
+            CookBook<span className="text-[#f28c2b]">.</span>
           </h1>
-          
-          <p className="text-lg mb-8 opacity-90">
-            Your first step into your desired career. With few of our 50 job role.
-          </p>
-          
-          <button className="bg-white text-green-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center">
-            Start Working
-            <div className="ml-3 bg-orange-500 p-2 rounded-full">
-              <ChefHat className="h-4 w-4 text-white" />
-            </div>
+          <button
+            aria-label="Search"
+            className="bg-white rounded-full w-10 h-10 flex justify-center items-center"
+          >
+           <ChefHat className="w-6 h-6 text-[#0f4d40]" />
           </button>
         </div>
-        
-        <div className="absolute bottom-0 right-0 w-64 h-64 opacity-20">
-          <img src="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" 
-               alt="Burger" className="w-full h-full object-cover rounded-full" />
+
+        <img
+          src={Burger}
+          alt="Cheeseburger"
+          className="mb-8"
+          width="200"
+          height="200"
+        />
+
+        <h2 className="text-white font-merri text-3xl md:text-4xl text-center leading-tight mb-4">
+          Get your First <br /> Chef Job.
+        </h2>
+
+        <p className="text-white text-center text-sm md:text-base mb-8 max-w-xs">
+          Your first step in the career <br /> path is to get a job.
+        </p>
+
+        <div className="flex space-x-4">
+          <button className="bg-white text-[#0f4d40] font-semibold rounded-full px-6 py-3 flex items-center space-x-2 hover:bg-gray-100 transition">
+            <i className="fas fa-pen-nib" />
+            <span>Start Writing</span>
+          </button>
+          <button
+            aria-label="Discord"
+            className="bg-[#f28c2b] rounded-full w-12 h-12 flex justify-center items-center hover:bg-[#e07a1f] transition"
+          >
+            <Facebook className="w-6 h-6 text-black" />
+          </button>
         </div>
       </div>
 
-      {/* Center Panel - Cooking Couple */}
-      <div className="bg-amber-50 p-8 lg:p-12 flex flex-col justify-center relative">
-        <div className="relative">
-          <img src="https://images.pexels.com/photos/4252139/pexels-photo-4252139.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" 
-               alt="Couple cooking together" className="w-full h-96 lg:h-full object-cover rounded-2xl" />
+      {/* Middle Panel */}
+      <div className="md:w-1/3 relative">
+      
+      
+        <img
+          src="https://storage.googleapis.com/a1aa/image/ea6fbed4-17ac-4eca-5b5f-1ee1bf488063.jpg"
+          alt="People cooking"
+          className="w-full h-full object-cover"
+        />
+       
+        
+        <div className="absolute bottom-2 left-2 right-2 flex justify-between items-center text-white text-xs font-semibold px-2">
           
-          <button className="absolute bottom-6 left-6 bg-white/80 backdrop-blur-sm p-3 rounded-full hover:bg-white transition-colors">
-            <Play className="h-6 w-6 text-gray-700 ml-1" />
-          </button>
+          <i className="fas fa-pause" />
+          <div className="h-1 bg-[#f28c2b] rounded-full flex-grow mx-2" />
+          <Play className="w-6 h-6 text-white" />
         </div>
       </div>
 
-      {/* Right Panel - Pizza */}
-      <div className="bg-yellow-400 text-gray-800 p-8 lg:p-12 flex flex-col justify-center relative overflow-hidden">
-        <div className="absolute top-10 right-10 w-16 h-16 bg-orange-500 rounded-full opacity-20"></div>
-        <div className="absolute bottom-20 left-10 w-12 h-12 bg-red-500 rounded-full opacity-20"></div>
-        
-        <div className="relative z-10">
-          <div className="mb-8">
-            <img src="https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" 
-                 alt="Pizza slice" className="w-32 h-32 object-cover rounded-full mx-auto mb-6" />
-          </div>
-          
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-center">
-            Cheese and
-            <br />
-            Spice on every
-            <br />
-            Slice.
-          </h2>
-          
-          <p className="text-center mb-8 opacity-80">
-            Why online when you can easily
-            <br />
-            eat our bread at home.
-          </p>
-          
-          <div className="text-center">
-            <button className="bg-white text-yellow-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-              Read Recipe
-            </button>
-          </div>
-        </div>
+      {/* Right Panel */}
+      <div className="bg-[#f9d94c] p-8 md:p-12 md:w-1/3 flex flex-col justify-center rounded-b-3xlounded-br-3xl">
+        <nav className="flex justify-center space-x-6 mb-8 text-sm font-semibold text-[#1a1a1a]">
+          <a href="#" className="hover:underline">
+            Dinners
+          </a>
+          <span>|</span>
+          <a href="#" className="hover:underline">
+            Restaurants
+          </a>
+          <span>|</span>
+          <a href="#" className="hover:underline">
+            Food News
+          </a>
+        </nav>
+
+        <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/045/910/794/small_2x/a-pizza-with-tomatoes-and-cheese-on-a-wooden-board-stock-png.png"
+          alt="Pizza"
+          className="mx-auto mb-8"
+          width="250"
+          height="250"
+        />
+
+        <h2 className="font-merri text-3xl md:text-4xl text-center leading-tight mb-4 text-[#1a1a1a]">
+          Cheese and <br />
+          Spice on every <br />
+          Slice.
+        </h2>
+
+        <p className="text-center text-sm md:text-base mb-8 text-[#1a1a1a]">
+          Why bother when you can easily <br /> mix up a batch at home.
+        </p>
+
+        <button className="bg-white text-[#1a1a1a] font-semibold rounded-full px-6 py-3 flex items-center space-x-2 mx-auto hover:bg-gray-100 transition">
+          <BookOpen className="w-6 h-6" />
+          <span>Read Recipe</span>
+        </button>
       </div>
-    </section>
+    </section>      
+
+
   );
 };
 

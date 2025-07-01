@@ -1,14 +1,17 @@
 import React from 'react';
 import Header from './components/Header';
+
 import HeroSection from './components/HeroSection';
-import ProductCards from './components/ProductCards';
-import SnacksSection from './components/SnacksSection';
+
+
 import ArnoldSection from './components/ArnoldSection';
 import ChickenBurgerSection from './components/ChickenBurgerSection';
 import FlavourSection from './components/FlavourSection';
 import CravingSection from './components/CravingSection';
 import FuelSection from './components/FuelSection';
 import Footer from './components/Footer';
+import MenuSection from './components/ProductCards';
+// import SnacksSection from './components/SnacksSection';
 
 function App() {
   return (
@@ -16,8 +19,8 @@ function App() {
       <Header />
       <main>
         <HeroSection />
-        <ProductCards />
-        <SnacksSection />
+        <MenuSection/>
+        {/* <SnacksSection />  */}
         <ArnoldSection />
         <ChickenBurgerSection />
         <FlavourSection />
@@ -25,6 +28,9 @@ function App() {
         <FuelSection />
       </main>
       <Footer />
+    
+
+   
     </div>
   );
 }

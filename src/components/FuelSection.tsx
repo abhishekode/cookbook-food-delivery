@@ -1,60 +1,108 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+
+import { Bell ,Instagram } from 'lucide-react';
+
 
 const FuelSection: React.FC = () => {
   return (
-    <section className="py-16 bg-green-700 text-white relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-32 h-32 border border-white/20 rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 border border-white/20 rounded-full"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-white/20 rounded-full"></div>
-        <div className="absolute bottom-10 left-1/3 w-20 h-20 border border-white/20 rounded-full"></div>
-      </div>
+    <section
+      className="relative py-12 sm:py-16 text-white overflow-hidden max-w-7xl mx-auto rounded-3xl bg-cover bg-center "
+      style={{
+        backgroundImage: `url('https://mir-s3-cdn-cf.behance.net/project_modules/hd/12858a32751817.56929eefe8431.jpg')`,
+      }}
+    >
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="flex items-center mb-6">
-              <div className="flex -space-x-2 mr-4">
-                <div className="w-10 h-10 bg-yellow-400 rounded-full border-2 border-white"></div>
-                <div className="w-10 h-10 bg-orange-500 rounded-full border-2 border-white"></div>
-                <div className="w-10 h-10 bg-red-500 rounded-full border-2 border-white"></div>
+      {/* Background dark overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-30 z-0" />
+
+      {/* Floating decorative images */}
+      <div className="absolute inset-0 z-10 pointer-events-none">
+        <div className="absolute top-[-40px] left-4 md:left-28 w-24 md:w-36 lg:w-48 h-24 md:h-36 lg:h-48 rounded-full overflow-hidden border-2 border-white">
+          <img
+            src="https://toppng.com/uploads/preview/pizza-food-transparent-background-11668769810o5tjxnfu4u.png"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute bottom-[-40px] right-4 md:right-28 w-24 md:w-36 lg:w-40 h-24 md:h-36 lg:h-40 rounded-full overflow-hidden border-2 border-white">
+          <img
+            src="https://b.zmtcdn.com/data/dish_photos/8ac/5fa70d27ec515040be6860c8d469c8ac.jpeg"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute bottom-[-20px] left-[-8px] w-16 md:w-20 h-16 md:h-20 rounded-full overflow-hidden border-2 border-white">
+          <img
+            src="https://www.mypricechopper.com/Frontend/Media/Recipes/ChicagoHotDog_Web_1110x625.jpg"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute -top-8 -right-8 w-24 md:w-32 lg:w-48 h-24 md:h-32 lg:h-48 rounded-full overflow-hidden border-2 border-white">
+          <img
+            src="https://www.madhuseverydayindian.com/wp-content/uploads/2022/11/easy-vegetable-biryani-500x500.jpg"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      {/* Main content */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center text-center space-y-6">
+          {/* Avatars and description */}
+          <div className="flex flex-col items-center mb-6">
+            <div className="flex -space-x-2 mb-2 justify-center items-center">
+             <div className='w-20 h-[1px] bg-white  bg-gradient-to-r from-gray-400 to-transparent blur-10'></div>
+
+              <div className="w-12 h-12 bg-yellow-400 rounded-full border-2 border-white overflow-hidden">
+                <img
+                  src="https://media.istockphoto.com/id/1301906355/photo/vegetarian-pizza-isolated-on-a-yellow-background-woman-taking-a-slice-of-pizza.jpg?s=612x612&w=0&k=20&c=T1Rw7sxs1QL38Il6NRIA_QliWFnmPf_aGujuc-ijJOE="
+                  alt=""
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
-              <div className="text-sm">
-                <div className="font-semibold">Better Taste, Life Feel</div>
-                <div className="opacity-80">Ultimate experience</div>
+
+              <div className="w-12 h-12 bg-white rounded-full border-2 border-yellow-400 overflow-hidden">
+                <img
+                  src="https://media.istockphoto.com/id/520410807/photo/cheeseburger.jpg?s=612x612&w=0&k=20&c=fG_OrCzR5HkJGI8RXBk76NwxxTasMb1qpTVlEM0oyg4="
+                  alt="Cheeseburger"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
+
+              <div className="w-12 h-12 bg-red-500 rounded-full border-2 border-white overflow-hidden z-10">
+                <img
+                  src="https://b.zmtcdn.com/data/dish_photos/8ac/5fa70d27ec515040be6860c8d469c8ac.jpeg"
+                  alt=""
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+
+              <div className='w-20 h-[1px] bg-white  bg-gradient-to-l from-gray-400 to-transparent blur-10'></div>
             </div>
-            
-            <h2 className="text-4xl lg:text-5xl font-bold mb-8">
-              Fuel your <span className="text-yellow-400">stomach</span>
-              <br />
-              in every bite
-            </h2>
-            
-            <button className="bg-white text-green-700 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center">
-              Subscribe Us
-              <div className="ml-3 bg-orange-500 p-2 rounded-full">
-                <ArrowRight className="h-4 w-4 text-white" />
-              </div>
-            </button>
+
+            <div className="text-sm text-center">
+              <div className="font-semibold">Better Taste, Life Feel</div>
+              <div className="opacity-80">Ultimate experience</div>
+            </div>
           </div>
-          
-          <div className="flex justify-center space-x-4">
-            <div className="space-y-4">
-              <img src="https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=150&h=200&fit=crop" 
-                   alt="Food item 1" className="w-24 h-32 object-cover rounded-2xl" />
-            </div>
-            
-            <div className="space-y-4 mt-8">
-              <img src="https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" 
-                   alt="Pizza" className="w-32 h-32 object-cover rounded-full" />
-            </div>
-            
-            <div className="space-y-4">
-              <img src="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=150&h=200&fit=crop" 
-                   alt="Burger" className="w-24 h-32 object-cover rounded-2xl" />
+
+          {/* Main Heading */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif leading-snug">
+            Fuel your <span className="text-yellow-400">stomach</span>
+            <br />
+            in every bite
+          </h2>
+
+          {/* Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <button className="bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition flex items-center gap-2">
+              <  Bell className="w-5 h-5 text-black" />
+              Subscribe Us
+            </button>
+            <div className="h-14 w-14 rounded-full bg-orange-500 flex items-center justify-center">
+              <Instagram  className="w-8 h-8" />
             </div>
           </div>
         </div>

@@ -1,91 +1,76 @@
 import React from 'react';
-import { Star, Heart } from 'lucide-react';
+
+const productData = [
+  {
+    title: 'Basket of wedges',
+    price: '35',
+    description: 'Crispy potato wedges with extra crunch.',
+    ingredients: 'Potatoes, Butter, Olive oil, Ground paprika, Lemon zest, Salt & Pepper for seasoning.',
+    comments: '36',
+    image: 'https://storage.googleapis.com/a1aa/image/f7d40fbf-fa69-422c-47b5-0257eed98bf1.jpg',
+  },
+  {
+    title: 'Classic Chicken Burger',
+    price: '45',
+    description: 'Juicy chicken burger with fresh veggies.',
+    ingredients: 'Chicken, Lettuce, Tomato, Cheese, Pickles, Secret Sauce.',
+    comments: '58',
+    image: 'https://storage.googleapis.com/a1aa/image/ac157f92-c59c-419f-762a-9d7cbd856915.jpg',
+  },
+  {
+    title: 'Sugar Free Delight',
+    price: '29',
+    description: 'Refreshing sugar-free beverage.try this ',
+    ingredients: 'Sparkling Water, Natural Flavors, Stevia, Citrus Extract.',
+    comments: '22',
+    image: 'https://storage.googleapis.com/a1aa/image/076ba64f-5287-461b-87be-f31b4b9e9e5b.jpg',
+  },
+];
 
 const ProductCards: React.FC = () => {
-  const products = [
-    {
-      id: 1,
-      title: "Basket of wedges",
-      price: "$5",
-      description: "Crispy potato wedges with extra crunch.",
-      details: "Potatoes, Butter, Olive oil, Onions powder, Garlic powder, Paprika for seasoning.",
-      rating: 4.5,
-      image: "https://images.pexels.com/photos/2878725/pexels-photo-2878725.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
-    },
-    {
-      id: 2,
-      title: "Chicken Burgers",
-      price: "$8",
-      description: "Chicken spicy seasoned meat with Homemade Chicken Burger with corn.",
-      details: "Read More",
-      rating: 4.8,
-      image: "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
-    },
-    {
-      id: 3,
-      title: "Sugar Free",
-      price: "",
-      description: "One of the online donut list specialist ingredients",
-      details: "Read More",
-      rating: 4.2,
-      image: "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
-      badge: "satisfy you"
-    }
-  ];
-
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
-            <div key={product.id} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative">
-                <img src={product.image} alt={product.title} className="w-full h-48 object-cover" />
-                <button className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-colors">
-                  <Heart className="h-5 w-5 text-gray-600" />
-                </button>
-                {product.badge && (
-                  <div className="absolute bottom-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm">
-                    {product.badge}
-                  </div>
-                )}
+    <section className="py-16 px-4 font-[Georgia]">
+      <div className="max-w-7xl mx-auto grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+        {productData.map((product, index) => (
+          <div key={index} className="flex flex-col sm:flex-row gap-4">
+            {/* Image */}
+            <div className="relative w-24 h-24 flex-shrink-0 mx-auto sm:mx-0">
+              <img
+                src={product.image}
+                alt={product.title}
+                className="w-24 h-24 object-cover rounded-full border-2 border-[#b36a1e]"
+              />
+            </div>
+
+            {/* Text */}
+            <div className="flex-1">
+              <div className="flex items-center gap-4 mb-1">
+                <h1 className="font-sans font-extrabold text-black text-lg leading-tight">
+                  {product.title}
+                </h1>
+                <div className="border-t border-black flex-1" />
+                <span className="font-sans font-bold text-black text-lg">{product.price}</span>
               </div>
-              
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold text-gray-900">{product.title}</h3>
-                  {product.price && (
-                    <span className="text-2xl font-bold text-orange-500">{product.price}</span>
-                  )}
-                </div>
-                
-                <p className="text-gray-600 mb-4 text-sm">{product.description}</p>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`h-4 w-4 ${
-                            i < Math.floor(product.rating)
-                              ? 'text-yellow-400 fill-current'
-                              : 'text-gray-300'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <span className="ml-2 text-sm text-gray-600">{product.rating}</span>
-                  </div>
-                  
-                  <button className="text-orange-500 text-sm font-semibold hover:text-orange-600 transition-colors">
-                    {product.details}
-                  </button>
-                </div>
+
+              <h2 className="font-serif text-black text-xl leading-snug mb-1">
+                {product.description}
+              </h2>
+
+              <p className="font-serif text-black text-sm leading-relaxed mb-2">
+                {product.ingredients}
+              </p>
+
+              <div className="flex items-center gap-3 text-black font-sans font-bold text-sm">
+                <button className="flex items-center gap-1 hover:underline">
+                  Read More <span className="text-lg font-extrabold">+</span>
+                </button>
+                <div className="border-t border-black w-12" />
+                <span>{product.comments}</span>
+                <i className="far fa-comment text-base" />
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
