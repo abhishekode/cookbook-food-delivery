@@ -7,7 +7,7 @@ import Burger from '../assists/burger.png'
 const HeroSection: React.FC = () => {
   return (
 
-    <section className="max-w-7xl mx-auto flex flex-col md:flex-row rounded-b-3xl overflow-hidden font-['Open_Sans'] bg-[#f9f8f0]">
+    <section className="mx-auto flex flex-col md:flex-row rounded-b-3xl overflow-hidden font-['Open_Sans'] bg-[#f9f8f0]">
       
       
       {/* Left Panel */}

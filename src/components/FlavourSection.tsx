@@ -1,86 +1,77 @@
-import React from 'react';
-import { PhoneCall, Star } from 'lucide-react';
+import React from "react";
+import { PhoneCall, Star } from "lucide-react";
 
 const FlavourSection: React.FC = () => {
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto bg-white px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row gap-8">
-        
-        {/* Left Side - Title & Image */}
-        <div className="w-full md:w-[35%] flex flex-col gap-6 items-center md:items-start">
-          <div className="flex items-center gap-4 justify-center md:justify-start">
-            <div className="h-px w-12 bg-orange-500"></div>
-            <h4
-              className="text-3xl md:text-4xl font-bold text-orange-500 tracking-wide text-center md:text-left"
-              style={{ fontFamily: "'Great Vibes', cursive" }}
-            >
+    <section className="bg-white py-20 border-b-2 border-gray-200">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row gap-16 items-center lg:items-start">
+
+        {/* LEFT SECTION */}
+        <div className="w-full lg:w-[33%] flex flex-col gap-8 items-center lg:items-start text-center lg:text-left">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-1 bg-orange-500"></div>
+            <h4 className="text-4xl font-bold text-orange-500" style={{ fontFamily: "'Great Vibes', cursive" }}>
               Food Flavours
             </h4>
-            <div className="h-px w-12 bg-orange-500"></div>
+            <div className="w-14 h-1 bg-orange-500"></div>
           </div>
 
           <img
-            src="https://images.unsplash.com/photo-1542773729-e92e9ae3e613?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1542773729-e92e9ae3e613?q=80&w=687"
             alt="Person eating"
-            className="w-64 sm:w-72 h-72 md:h-96 sm:h-80 md:w-80 object-cover rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105"
+            className="rounded-3xl shadow-xl w-[90%] max-w-sm h-[26rem] object-cover hover:scale-105 transition-transform duration-300"
           />
         </div>
 
-        {/* Center - Food Card */}
-        <div className="w-full md:w-[35%] bg-white p-5 rounded-2xl mx-auto">
+        {/* CENTER SECTION */}
+        <div className="w-full lg:w-[34%] bg-white p-8 rounded-3xl shadow-2xl border border-gray-200 flex flex-col items-center">
           <img
-            src="https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?q=80&w=1170"
             alt="Crispy food"
-            className="w-full h-40 object-cover rounded-xl mb-8"
+            className="w-full max-w-md h-48 object-cover rounded-xl mb-6"
           />
 
-          <h3 className="font-bold text-2xl text-gray-900 mb-5 font-serif leading-snug text-center md:text-left">
+          <h3 className="text-3xl font-bold text-gray-900 font-serif text-center leading-tight">
             Crispy Potato  
-            <br /> <span className='text-orange-500 text-2xl'>Crunchy Wedges</span>
+            <br /> <span className="text-orange-500">Crunchy Wedges</span>
           </h3>
 
-          <p className="text-gray-600 text-sm mb-4 font-serif leading-snug text-center md:text-left">
-            Potatoes, Butter, Olive Oil, Onion Powder,<br /><span>Garlic Powder, Paprika.</span> 
+          <p className="text-gray-600 text-base mt-4 mb-6 font-serif text-center leading-relaxed">
+            Potatoes, Butter, Olive Oil, Onion Powder,<br />Garlic Powder, Paprika.
           </p>
 
-          <div className="flex flex-row sm:flex-row items-center justify-center sm:justify-start gap-4 md:gap-6">
-            <button className="bg-green-800 hover:bg-green-900 text-white px-5 py-2 rounded-full text-sm font-medium transition duration-300 h-14 md:w-full w-44 sm:w-52 font-serif leading-snug">
+          <div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-center">
+            <button className="bg-green-800 hover:bg-green-900 text-white px-8 py-4 rounded-full text-base font-semibold font-serif w-full sm:w-auto transition-all duration-300">
               Book Restaurant
             </button>
-            <div className="h-12 md:h-12  md:w-16 w-12 rounded-full bg-orange-500 flex items-center justify-center shadow-md">
-              <PhoneCall className="w-5 h-5   text-white" />
+            <div className="h-14 w-14 rounded-full bg-orange-500 flex items-center justify-center shadow-md">
+              <PhoneCall className="w-6 h-6 text-white" />
             </div>
           </div>
         </div>
 
-        {/* Right - Text and Ratings */}
-        <div className="w-full md:w-[30%] flex flex-col gap-6 items-center md:items-start">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-serif leading-snug text-center md:text-left">
-            Savour the
-            <br />
-            <span className="text-orange-500 ">flavour</span>, any
-            <br />
-            time you'll
-            <br />
-            savour
+        {/* RIGHT SECTION */}
+        <div className="w-full lg:w-[33%] flex flex-col gap-8 items-center lg:items-start text-center lg:text-left">
+          <h2 className="text-5xl font-bold text-gray-900 font-serif leading-tight">
+            Savour the <br />
+            <span className="text-orange-500">flavour</span>, any <br />
+            time you'll savour.
           </h2>
 
-          <div className='flex flex-col gap-8'>
-            <div className="h-[1.5px] w-60 bg-gradient-to-r from-transparent via-orange-500 to-transparent mx-auto md:mx-0"></div>
+          <div className="h-[2px] w-64 bg-gradient-to-r from-transparent via-orange-500 to-transparent mx-auto lg:mx-0"></div>
 
-            <div className="flex items-center justify-center md:justify-start gap-2">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <span className="ml-2 font-bold text-gray-900 font-serif leading-snug">Rylic Studio</span>
+          <div className="flex items-center justify-center lg:justify-start gap-3">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+              ))}
             </div>
-
-            <p className="text-gray-600 text-sm font-serif leading-snug text-center md:text-left px-2">
-              Rylic Rice is a publicly powered innovation that eliminates manual effort and fluid waste. Designed for efficiency and sustainability, it streamlines operational workflows while reducing energy consumption.
-            </p>
+            <span className="text-lg font-bold text-gray-800 font-serif">Rylic Studio</span>
           </div>
+
+          <p className="text-gray-700 text-base font-serif leading-relaxed max-w-md px-2 lg:px-0">
+            Rylic Rice is a publicly powered innovation that eliminates manual effort and fluid waste. Designed for efficiency and sustainability, it streamlines operational workflows while reducing energy consumption.
+          </p>
         </div>
 
       </div>
