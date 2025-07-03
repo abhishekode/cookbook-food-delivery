@@ -6,7 +6,7 @@ import { Bell ,Instagram } from 'lucide-react';
 const FuelSection: React.FC = () => {
   return (
     <section
-      className="relative py-12 sm:py-16 text-white overflow-hidden max-w-7xl mx-auto rounded-3xl bg-cover bg-center "
+      className="relative py-12 sm:py-16 text-white overflow-hidden mx-auto rounded-3xl bg-cover bg-center md:max-w-[90rem]"
       style={{
         backgroundImage: `url('https://mir-s3-cdn-cf.behance.net/project_modules/hd/12858a32751817.56929eefe8431.jpg')`,
       }}
@@ -48,14 +48,14 @@ const FuelSection: React.FC = () => {
       </div>
 
       {/* Main content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center space-y-6">
+      <div className="relative z-20  mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center text-center space-y-8">
           {/* Avatars and description */}
-          <div className="flex flex-col items-center mb-6">
-            <div className="flex -space-x-2 mb-2 justify-center items-center">
+          <div className="flex flex-col items-center mb-6 md:mb-0">
+            <div className="flex -space-x-2 mb-2  justify-center items-center">
              <div className='w-20 h-[1px] bg-white  bg-gradient-to-r from-gray-400 to-transparent blur-10'></div>
 
-              <div className="w-12 h-12 bg-yellow-400 rounded-full border-2 border-white overflow-hidden">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-yellow-400 rounded-full border-2 border-white overflow-hidden">
                 <img
                   src="https://media.istockphoto.com/id/1301906355/photo/vegetarian-pizza-isolated-on-a-yellow-background-woman-taking-a-slice-of-pizza.jpg?s=612x612&w=0&k=20&c=T1Rw7sxs1QL38Il6NRIA_QliWFnmPf_aGujuc-ijJOE="
                   alt=""
@@ -63,7 +63,7 @@ const FuelSection: React.FC = () => {
                 />
               </div>
 
-              <div className="w-12 h-12 bg-white rounded-full border-2 border-yellow-400 overflow-hidden">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full border-2 border-yellow-400 overflow-hidden">
                 <img
                   src="https://media.istockphoto.com/id/520410807/photo/cheeseburger.jpg?s=612x612&w=0&k=20&c=fG_OrCzR5HkJGI8RXBk76NwxxTasMb1qpTVlEM0oyg4="
                   alt="Cheeseburger"
@@ -71,7 +71,7 @@ const FuelSection: React.FC = () => {
                 />
               </div>
 
-              <div className="w-12 h-12 bg-red-500 rounded-full border-2 border-white overflow-hidden z-10">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-red-500 rounded-full border-2 border-white overflow-hidden z-10">
                 <img
                   src="https://b.zmtcdn.com/data/dish_photos/8ac/5fa70d27ec515040be6860c8d469c8ac.jpeg"
                   alt=""
@@ -79,17 +79,18 @@ const FuelSection: React.FC = () => {
                 />
               </div>
 
-              <div className='w-20 h-[1px] bg-white  bg-gradient-to-l from-gray-400 to-transparent blur-10'></div>
+              <div className='w-20 h-[1px] bg-white  bg-gradient-to-l from-gray-400 to-transparent blur-20'></div>
             </div>
 
-            <div className="text-sm text-center">
+            <div className="text-sm text-center font-serif md:text-lg">
               <div className="font-semibold">Better Taste, Life Feel</div>
               <div className="opacity-80">Ultimate experience</div>
             </div>
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif leading-snug">
+         
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-[poppins] font-bold">
             Fuel your <span className="text-yellow-400">stomach</span>
             <br />
             in every bite
@@ -97,7 +98,7 @@ const FuelSection: React.FC = () => {
 
           {/* Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <button className="bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition flex items-center gap-2">
+            <button className="bg-white text-green-700 px-6 py-3 rounded-full font-sans font-bold hover:bg-gray-100 transition flex items-center gap-2">
               <  Bell className="w-5 h-5 text-black" />
               Subscribe Us
             </button>
@@ -107,6 +108,7 @@ const FuelSection: React.FC = () => {
           </div>
         </div>
       </div>
+  
     </section>
   );
 };
